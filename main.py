@@ -5,9 +5,14 @@ import os
 
 
 def download_file(url, filename):
+    if os.path.exists(filename):
+        print(f"File already exists: {filename}")
+        return
+
     response = requests.get(url)
     with open(filename, "wb") as file:
         file.write(response.content)
+    print(f"Downloaded: {filename}")
 
 
 def get_next_episode_url(soup):
