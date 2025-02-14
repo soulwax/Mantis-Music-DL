@@ -1,0 +1,1130 @@
+@media only screen and (max-width: 1200px) {
+	.container {
+		box-sizing: border-box;
+		padding: 8px 24px 0;
+		width: 100%;
+	}
+
+	.header_menu {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		float: none;
+		justify-content: flex-end;
+		max-width: 100%;
+	}
+
+	#content {
+		padding: 0;
+	}
+
+	.Content {
+		margin: 32px 0 162px;
+	}
+
+	.single-post .PageHead {
+		padding: 150px 0 24px;
+	}
+
+	.SingleTitle h1 {
+		width: calc(100% - 32px);
+	}
+
+	#archives {
+		margin: 0 16px 64px;
+		padding: 0;
+	}
+
+	#Artist {
+		margin: 0 16px 192px;
+		padding: 0;
+	}
+
+	#archives.align {
+		margin: 0 16px 128px;
+	}
+
+	.current_show {
+		padding: 32px 32px 48px;
+	}
+
+	.archives_current p {
+		font-size: 21px;
+	}
+
+	.archives_current_meta {
+		padding-bottom: 24px;
+		column-gap: 24px;
+	}
+
+	.woocommerce div.product .product-subtitle,
+	.woocommerce div.product .product_title {
+		font-size: 3.6em;
+	}
+
+	.woocommerce #content div.product div.summary,
+	.woocommerce div.product div.summary,
+	.woocommerce-page #content div.product div.summary,
+	.woocommerce-page div.product div.summary {
+		margin: 16px 0 0;
+	}
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+	.f64 {
+		font-size: 48px;
+	}
+
+	.prods.Woo5,
+	.prods.Woo3 {
+		display: none;
+	}
+
+	.prods.Woo4 {
+		display: inline-flex;
+		padding: 0 0 48px;
+	}
+
+	.Podcasts .Play,
+	.Podcasts .Download,
+	.Podcasts .RSS,
+	.Podcasts .iTunes {
+		border: none;
+	}
+
+	.Podcasts a {
+		padding: 18px 0;
+	}
+
+	.Podcasts {
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.SingleFooterRadio .align {
+		width: calc(100vw - 20%);
+	}
+
+	.RecentRead {
+		column-gap: 24px;
+	}
+
+	#content {
+		margin-bottom: 128px;
+	}
+
+	.ArtistArchives {
+		column-count: 2;
+	}
+
+	.ArtistHead img,
+	.ArtistMeta {
+		width: 50%;
+		height: fit-content;
+	}
+
+	#header {
+		position: relative;
+	}
+
+	.container {
+		padding: 8px 24px 0;
+	}
+
+	.header_menu {
+		justify-content: space-around;
+		padding: 0 0 4px;
+		height: auto;
+	}
+
+	.PageHead {
+		padding: 130px 0 16px;
+	}
+
+	.page-template-2021-archives-mixes #archives {
+		padding: 0 24px 0;
+	}
+
+	#archives {
+		padding: 0;
+	}
+
+	.full_logo_cont {
+		box-sizing: border-box;
+		float: none;
+		margin: 0 auto;
+		padding: 6px 0 0;
+	}
+
+	.prods {
+		column-gap: 16px;
+		margin: 0 -16px 0 0;
+	}
+
+	.item.prod_box {
+		width: calc(25% - 16px);
+	}
+
+	.overlay {
+		max-height: calc(100% - 102px);
+		top: 102px;
+	}
+
+	.menu-item-44167 a {
+		border-width: 1px;
+	}
+
+	.header_menu ul li a {
+		margin: 0;
+		padding: 10px 15px;
+	}
+
+	.header_menu li.menu-item-44167 a {
+		padding: 9px 16px;
+	}
+
+	.header_search input[type="text"] {
+		color: #fff;
+		font-size: 30px;
+		letter-spacing: -1px;
+		padding: 8px 0;
+		width: 100%;
+	}
+
+	.full-width {
+		padding: 36px 0 72px;
+	}
+
+	.full-width blockquote p {
+		padding: 0 16px;
+	}
+
+	.archives_shows {
+		column-gap: 16px;
+		margin: 0 -16px 0 0;
+	}
+
+	.archives_episode {
+		width: calc(25% - 16px);
+	}
+
+	.archives_image {
+		min-width: 360px;
+	}
+
+	.archives_current p {
+		font-size: 18px;
+	}
+
+	.t10 {
+		font-size: 9px;
+	}
+
+	#colophon.site-footer {
+		padding: 32px 24px 0;
+		margin: 0 auto;
+	}
+
+	.foot-socials a {
+		font-size: 16px;
+		margin: 0 0 0 12px;
+	}
+
+	.IntroBlurb {
+		top: 100.5px;
+	}
+
+	.archives_current_meta {
+		padding: 16px 0 32px;
+	}
+
+	.page-template-2021-archives-mixes .arc_play_dl {
+		row-gap: 10px;
+	}
+
+	.large-block-grid-5,
+	.mini-block-grid-3,
+	.small-block-grid-2 {
+		display: none;
+	}
+
+	.medium-block-grid-4 {
+		display: flex;
+	}
+
+	.single_variation_wrap {
+		display: flex;
+		column-gap: 12px;
+		/* justify-content: space-between; */
+		align-items: center;
+	}
+
+	.woocommerce-variation-price {
+		padding: 0;
+	}
+
+	.woocommerce div.product form.cart .button {
+		font-size: 15px;
+	}
+
+	.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item) {
+		margin: 0;
+	}
+
+	.woocommerce div.product .product-subtitle,
+	.woocommerce div.product .product_title {
+		font-size: 48px;
+	}
+
+	.woocommerce #content div.product div.summary,
+	.woocommerce div.product div.summary,
+	.woocommerce-page #content div.product div.summary,
+	.woocommerce-page div.product div.summary {
+		margin: 0;
+	}
+
+	.page-template-2021-archives-radio #archives .ProdBorder {
+		margin-top: 0;
+	}
+
+	.current_show {
+		padding: 24px 24px 64px;
+		-webkit-clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 98%);
+		clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 98%);
+		display: flex;
+		flex-direction: column;
+	}
+
+	.archives_current {
+		margin-top: 24px;
+	}
+
+	.archives_current,
+	.archives_current .icon-icon-play {
+		font-size: 48px;
+		max-width: 100%;
+	}
+
+	.playlist_number {
+		flex-direction: column;
+		row-gap: 8px;
+	}
+
+	.site-info {
+		margin: 0 148px 0 0;
+		align-content: flex-end;
+	}
+
+	.site-tag {
+		column-gap: 8px;
+	}
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 749px) {
+	.f18 {
+		font-size: 16px;
+	}
+
+	.headng_subscribe .podcasts .icon-icon-podcast,
+	.headng_subscribe .podcasts .icon-icon-rss {
+		font-size: 22px;
+	}
+
+	.header_menu {
+		display: none;
+	}
+
+	.mobile-menu {
+		display: block;
+	}
+
+	.NavigationSlideOut {
+		display: block;
+		text-align: center;
+	}
+
+	.mob_burger {
+		display: block;
+	}
+
+	.DropDown .closebtn {
+		font-size: 24px;
+	}
+
+	.overlay {
+		top: 66px;
+		max-height: calc(100% - 129px);
+	}
+
+	.full_logo_cont {
+		padding: 8px 0;
+	}
+
+	.DropDown {
+		display: block;
+	}
+
+	.mob_menu {
+		background: #fff;
+		display: block;
+		margin: 0 0 24px;
+		padding: 66px 0 24px;
+	}
+
+	.item.prod_box {
+		width: calc(33.33% - 16px);
+	}
+
+	#colophon.site-footer {
+		padding: 16px 0 80px;
+		border: none;
+	}
+
+	.site-info .foot-links,
+	.site-footer .foot-socials,
+	.site-footer .icon-icon-darkfloor {
+		display: none;
+	}
+
+	.MobileSocials {
+		bottom: 16px;
+		color: #212121;
+		position: fixed;
+	}
+
+	.MobileSocials .icon-icon-darkfloor {
+		font-size: 16px;
+		padding: 0 32px;
+	}
+
+	.MobileSocials .foot-socials {
+		display: none;
+	}
+
+	.PageHead {
+		padding: 98px 16px 24px;
+	}
+
+	.PageHead h1,
+	.PageHead p {
+		padding: 0;
+		height: fit-content;
+	}
+
+	.single-post .PageHead {
+		padding: 98px 0 24px;
+	}
+
+	.SingleImg img {
+		padding: 0 24px;
+		width: 100%;
+	}
+
+	.prods.Woo5,
+	.prods.Woo4 {
+		display: none;
+	}
+
+	.prods.Woo3 {
+		display: inline-flex;
+		padding: 0 0 64px;
+	}
+
+	.PostHeader {
+		margin: 24px 0 0;
+	}
+
+	.Content {
+		margin: 32px 0 162px;
+	}
+
+	.Content h4 {
+		width: max-content;
+	}
+
+	.SingleTitle h1 {
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	.NewsFeed.Relate4 {
+		display: none;
+	}
+
+	.NewsFeed.Relate2 {
+		display: flex;
+		column-count: 2;
+		column-gap: 16px;
+		margin: 8px -16px 0 0;
+		flex-direction: row;
+		justify-content: space-between;
+		max-width: 100%;
+	}
+
+	.NewsFeed a {
+		width: calc(50% - 8px);
+		max-width: 100%;
+		line-height: 100%;
+	}
+
+	.Podcasts {
+		column-gap: 8px;
+		font-size: 12px;
+		display: flex;
+		justify-content: space-between;
+		padding: 0 24px;
+	}
+
+	.wp-pagenavi span.pages {
+		display: block;
+		padding: 0 0 4px;
+		min-width: 100%;
+		border-bottom: 1px solid #E1e1e1;
+		margin: 0 0 8px;
+		clear: both;
+		text-align: left;
+	}
+
+	.ArtistHead,
+	.woocommerce div.product {
+		flex-direction: column;
+		display: block;
+	}
+
+	.ArtistHead img {
+		margin: 0 0 48px;
+		width: 100%;
+	}
+
+	.ArtistMeta {
+		width: 100%;
+	}
+
+	.ArtistBio {
+		margin: 0 0 64px;
+	}
+
+	.ArtistReleases #archives {
+		padding: 8px 0 48px;
+	}
+
+	.Legacy h2 {
+		padding: 24px 0 48px;
+		margin: 48px 0 0;
+	}
+
+	.container {
+		padding: 8px 0 0;
+	}
+
+	.full-width {
+		padding: 32px 16px 0;
+	}
+
+	.full-width blockquote p {
+		padding: 0;
+	}
+
+	#content,
+	#liveAlt {
+		padding: 0 24px;
+	}
+
+	.page-template-page-twitch #content,
+	.page-template-page-twitch .container,
+	.page-template-page-twitch .container #liveVideo {
+		padding: 0;
+	}
+
+	.NewsFeed,
+	.search-no-results .wpp-list {
+		row-gap: 48px;
+		column-gap: 16px;
+		margin: 14px -16px 0 0;
+	}
+
+	.search-no-results .NewsFeed,
+	.search-no-results .wpp-list {
+		margin: 88px -20px 0 0;
+	}
+
+	.DateCat {
+		margin: 2px 0 8px;
+	}
+
+	.NewsFeed .Box {
+		width: calc(50% - 16px);
+	}
+
+	.single .NewsFeed .align {
+		height: 16px;
+	}
+
+	#content .NewsFeed img {
+		margin: 0 0 -4px;
+	}
+
+	.archives_shows {
+		column-gap: 20px;
+		padding: 0 0 160px;
+		justify-content: flex-start;
+		margin: 0 -16px 0 0;
+	}
+
+	.current_show {
+		flex-direction: column;
+		display: flex;
+	}
+
+	.archives_current {
+		margin: 24px 0 0;
+		font-size: 40px;
+		min-width: 100%;
+	}
+
+	.archives_current .icon-icon-play {
+		font-size: 48px;
+	}
+
+	.archives_episode {
+		width: calc(33.33% - 20px);
+	}
+
+	.archives_image {
+		min-width: calc(52% - 20px);
+	}
+
+	.archives_current p {
+		font-size: 19.25px;
+		margin: 0;
+	}
+
+	.archives_genres a {
+		font-size: 11px;
+		line-height: 180%;
+	}
+
+	.CoverLanding {
+		height: calc(100% - 63px);
+	}
+
+	.PageHead h1 {
+		font-size: 48px;
+	}
+
+	.IntroBlurb {
+		top: 66px;
+	}
+
+	.IntroSince {
+		display: block;
+		font-size: 85%;
+	}
+
+	.page-template-2021-archives-mixes #archives,
+	.page-template-2021-archives-radio #archives {
+		padding: 0 16px 0;
+	}
+
+	.large-block-grid-5,
+	.medium-block-grid-4,
+	.small-block-grid-2 {
+		display: none;
+	}
+
+	.mini-block-grid-3 {
+		display: flex;
+	}
+
+	.woocommerce div.product .product-subtitle,
+	.woocommerce div.product .product_title {
+		font-size: 40px;
+	}
+
+	.woocommerce-tabs {
+		margin: 0;
+		width: 100%;
+		font-size: 16px;
+	}
+
+	.woocommerce #content div.product div.images,
+	.woocommerce div.product div.images,
+	.woocommerce-page #content div.product div.images,
+	.woocommerce-page div.product div.images,
+	.woocommerce #content div.product div.summary,
+	.woocommerce div.product div.summary,
+	.woocommerce-page #content div.product div.summary,
+	.woocommerce-page div.product div.summary {
+		width: 100%;
+	}
+
+	#archives .ProdBorder {
+		padding: 0;
+	}
+
+	.ProductDetails {
+		font-size: 18px;
+		margin: 0;
+	}
+
+	.woocommerce-cart .woocommerce {
+		border: none;
+	}
+
+	.woocommerce .woocommerce-breadcrumb {
+		height: fit-content;
+		margin: 12px 0 24px;
+		font-size: 11px;
+	}
+
+	.woocommerce #content div.product div.images,
+	.woocommerce div.product div.images,
+	.woocommerce-page #content div.product div.images,
+	.woocommerce-page div.product div.images {
+		margin-bottom: 24px;
+	}
+
+	.ProductMeta {
+		padding: 0;
+	}
+
+	.woocommerce-account .woocommerce-MyAccount-navigation ul {
+		column-gap: 24px;
+		justify-content: center;
+		line-height: 160%;
+		row-gap: 12px;
+		flex-wrap: wrap;
+	}
+
+	.woocommerce table.shop_table_responsive tr,
+	.woocommerce-page table.shop_table_responsive tr {
+		margin: 0 0 24px;
+	}
+
+	.woocommerce table.shop_table_responsive tr:nth-child(2n) td,
+	.woocommerce-page table.shop_table_responsive tr:nth-child(2n) td a {
+		text-shadow: 0.03em 0 #f5f5f5, -0.03em 0 #f5f5f5, 0 0.03em #f5f5f5, 0 -0.03em #f5f5f5, 0.06em 0 #f5f5f5, -0.06em 0 #f5f5f5, 0.09em 0 #f5f5f5, -0.09em 0 #f5f5f5, 0.12em 0 #f5f5f5, -0.12em 0 #f5f5f5, 0.15em 0 #f5f5f5, -0.15em 0 #f5f5f5;
+	}
+
+	.woocommerce form .form-row input.input-text,
+	.woocommerce form .form-row textarea,
+	.select2-container,
+	.select2-container .select2-selection--single .select2-selection__rendered {
+		font-size: 18px;
+		letter-spacing: -0.1px;
+	}
+
+	.woocommerce-page table.cart td.actions .coupon {
+		display: flex;
+		float: right;
+		width: 100%;
+		margin: 0 0 16px;
+	}
+
+	.woocommerce-cart table.cart td.actions .coupon .input-text {
+		width: 100%;
+	}
+
+	#archives .full-width .woocommerce form table tbody tr:nth-child(2) td button {
+		width: fit-content;
+	}
+
+	.woocommerce table.shop_table_responsive tr:nth-child(2n) td,
+	.woocommerce-page table.shop_table_responsive tr:nth-child(2n) td {
+		background: none;
+	}
+
+	.site-info {
+		margin: 0;
+		align-items: center;
+		padding: 0 12px 8px;
+		line-height: 120%;
+		align-content: center;
+	}
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 638px) {
+	.SingleTitle h1 {
+		font-size: 40px;
+		padding: 48px 0 0;
+		line-height: 120%;
+	}
+
+	.PostBlock {
+		display: none;
+	}
+
+	.PostInfo {
+		width: 50%;
+	}
+
+	.current_show {
+		display: flex;
+		flex-direction: column;
+		row-gap: 24px;
+	}
+
+	.archives_image {
+		min-width: 100%;
+		margin: 0;
+	}
+
+	.IntroRadio,
+	.IntroSince {
+		display: block;
+	}
+
+	.IntroDot {
+		display: none;
+	}
+
+	.page-template-2021-archives-mixes #archives,
+	.page-template-2021-archives-radio #archives {
+		padding: 16px 16px 0;
+	}
+
+	.page-template-2021-archives-radio .arc_play_dl,
+	.page-template-2021-archives-mixes .arc_play_dl {
+		margin: 0 0 16px;
+		display: flex;
+		width: 100%;
+		align-items: stretch;
+	}
+
+	.archives_download,
+	.archives_tracklist {
+		justify-content: center;
+	}
+
+	.arc_paypal {
+		display: flex;
+		margin: 24px auto 0;
+	}
+
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 500px) {
+	blockquote p {
+		padding: 8px 0;
+		font-size: 18px;
+		line-height: 160%;
+		letter-spacing: -0.6px;
+	}
+
+	.f12 {
+		font-size: 10px;
+	}
+
+	.f18 {
+		font-size: 15px;
+	}
+
+	.prods.Woo5,
+	.prods.Woo3,
+	.site-since {
+		display: none;
+	}
+
+	.prods.Woo4 {
+		display: inline-flex;
+		padding: 0 0 64px;
+	}
+
+	.SingleImg img {
+		max-width: 100%;
+	}
+
+	.Content,
+	.full-width {
+		font-size: 14px;
+		padding: 32px 0 0;
+	}
+
+	.Content .PatreonBox {
+		display: flex;
+		flex-direction: column;
+		row-gap: 12px;
+		padding: 32px 24px 24px;
+		align-items: stretch;
+	}
+
+	.Content .icon-icon-patreon {
+		margin: 4px 0 0;
+	}
+
+	.Podcasts {
+		border: none;
+		display: inline-table;
+		padding: 0 32px 8px;
+		line-height: 100%;
+		margin: 0 0 32px;
+		letter-spacing: 0.4px;
+		width: 100%;
+		height: 56px;
+	}
+
+	.Podcasts a {
+		width: 50%;
+	}
+
+	.Podcasts .Play,
+	.Podcasts .Download,
+	.Podcasts .RSS,
+	.Podcasts .iTunes {
+		column-gap: 10px;
+		display: inline-flex;
+		align-items: center;
+		height: fit-content;
+		padding: 0 0 24px;
+	}
+
+	.Single .genres {
+		line-height: 160%;
+	}
+
+	.PostSocials {
+		margin: 0;
+		justify-content: end;
+	}
+
+	#SingleHead {
+		margin: 32px 0 0;
+		letter-spacing: 0.5px;
+	}
+
+	.SingleTitle h1 {
+		padding: 32px 0 0;
+	}
+
+	.Content {
+		margin: 32px 0 162px;
+		padding: 0;
+	}
+
+	.RecentRead {
+		display: flex;
+		flex-direction: column;
+		padding: 32px 0 0;
+	}
+
+	.RecentRead .Read,
+	.RecentRead .Recent {
+		border-top: 1px solid #DDD;
+		padding: 16px 0;
+		width: 100%;
+	}
+
+	.RecentRead .align {
+		display: none;
+	}
+
+	.SingleFooterRadio {
+		-webkit-clip-path: polygon(100% 0%, 0% 16%, 0% 100%, 100% 100%);
+		clip-path: polygon(100% 0%, 0 16%, 0% 100%, 100% 100%);
+	}
+
+	.SingleFooterRadio .align {
+		width: calc(100vw - 25%);
+	}
+
+	.NewsFeed h4 {
+		font-size: 18px;
+		letter-spacing: -0.1px;
+	}
+
+	.wp-pagenavi {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		column-gap: inherit;
+		margin-bottom: 120px;
+	}
+
+	.supportbox a {
+		padding: 32px 32px 16px;
+	}
+
+	.supportbox_wrapper {
+		display: inline-flex;
+		flex-direction: column;
+		row-gap: 12px;
+		width: 100%;
+		align-items: stretch;
+	}
+
+	.full_logo_cont img,
+	.logo_cont img {
+		max-width: 140px;
+	}
+
+	.overlay {
+		top: 62px;
+		max-height: calc(100% - 129px);
+	}
+
+	.wp-pagenavi a,
+	.wp-pagenavi span {
+		margin: 0 1px;
+	}
+
+	.single #archives.ProdBorder {
+		margin-bottom: 134px;
+	}
+
+	.Recent,
+	ul.wpp-list {
+		font-size: 18px;
+	}
+
+	.archives_shows {
+		column-gap: 16px;
+		margin-right: -16px;
+		width: fit-content;
+	}
+
+	.archives_episode {
+		width: calc(50% - 16px);
+	}
+
+	.current_show {
+		flex-direction: column;
+		padding: 16px;
+		row-gap: 0;
+	}
+
+	.archives_image {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.arc_play_dl {
+		display: flex;
+		justify-content: flex-end;
+		align-items: baseline;
+	}
+
+	.site-footer .icon-icon-darkfloor,
+	.foot-socials {
+		top: 16px;
+		font-size: 16px;
+	}
+
+	.foot-socials a {
+		margin: 0 0 0 16px;
+	}
+
+	.foot-links {
+		margin: 8px 0 0;
+	}
+
+	.ArtistURL {
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		flex-direction: row;
+		column-gap: 12px;
+	}
+
+	.ArtistEPK {
+		text-align: right;
+	}
+
+	.ArtistArchives {
+		column-count: 1;
+	}
+
+	.item.prod_box {
+		width: calc(50% - 16px);
+	}
+
+	#Artist {
+		margin: 0 16px 192px;
+	}
+
+	#content {
+		padding: 0 16px;
+		margin: 0;
+	}
+
+	.IntroBlurb {
+		top: 62px;
+	}
+
+	.page-template-2021-archives-mixes #archives.current,
+	.page-template-2021-archives-radio #archives.current {
+		padding: 16px 0 0;
+	}
+
+	.page-template-2021-archives-mixes .headng_subscribe .networks,
+	.page-template-2021-archives-radio .headng_subscribe .networks,
+	.headng_subscribe .podcasts {
+		row-gap: 8px;
+		margin: 24px 0 0;
+		justify-content: space-evenly;
+	}
+
+	.current_show .archives_episode_genres {
+		margin: 12px 0 24px;
+		column-gap: 4px;
+		justify-content: space-evenly;
+	}
+
+	.archives_current p {
+		font-size: 16px;
+	}
+
+	.archives_episode_meta p {
+		font-size: 13px;
+	}
+
+	.subscribe_box {
+		margin: 0;
+		padding: 0;
+	}
+
+	.large-block-grid-5,
+	.medium-block-grid-4,
+	.mini-block-grid-3 {
+		display: none;
+	}
+
+	.small-block-grid-2 {
+		display: flex;
+	}
+
+	.RecentRead .Recent li,
+	.wpp-list li,
+	.wpp-list li:hover {
+		line-height: 140%;
+		padding: 12px 0;
+	}
+
+	.PostAuthor a {
+		font-size: 12px;
+	}
+
+	#SingleHead.align {
+		display: block;
+		margin-top: 32px;
+	}
+
+	.ArchivesBy {
+		margin: 0 0 16px;
+	}
+
+}
+
+@media only screen and (max-width: 400px) {
+	.archives_episode .archives_guest {
+		display: inline-flex;
+		flex-direction: column;
+	}
+
+	.archives_show_no {
+		margin: 0 0 4px;
+	}
+}
