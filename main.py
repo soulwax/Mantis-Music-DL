@@ -1,3 +1,5 @@
+# File: main.py
+
 import requests
 from bs4 import BeautifulSoup
 import re
@@ -21,8 +23,8 @@ def get_next_episode_url(soup):
 
 
 def main():
-    if not os.path.exists("mantis_radio_mixtapes"):
-        os.makedirs("mantis_radio_mixtapes")
+    if not os.path.exists("output"):
+        os.makedirs("output")
 
     current_url = "https://darkfloor.co.uk/mantisradio356/"
     episode = 356
@@ -39,7 +41,7 @@ def main():
             mixtape_name = f"mantis_radio_{episode}_{os.path.basename(mixtape_url)}"
 
             print(f"Downloading: {mixtape_name}")
-            download_file(mixtape_url, f"mantis_radio_mixtapes/{mixtape_name}")
+            download_file(mixtape_url, f"output/{mixtape_name}")
             print(f"Downloaded: {mixtape_name}")
 
         current_url = get_next_episode_url(soup)
