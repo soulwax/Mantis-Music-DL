@@ -179,3 +179,5 @@ cython_debug/
 output/
 
 .DS_Store
+
+*.mp3
