@@ -19,7 +19,7 @@ logging.basicConfig(
 class MantisDownloader:
     def __init__(self):
         self.base_url = "https://darkfloor.co.uk"
-        self.download_dir = "mantis_radio_downloads"
+        self.download_dir = "output"
         self.session = requests.Session()
         self.headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
@@ -27,6 +27,15 @@ class MantisDownloader:
         self.processed_urls = set()
         self.episode_urls = {}
         self.load_episode_urls()
+
+    def generate_episode_urls(self):
+        """Generate all possible episode URLs from 1 to 357"""
+        for episode in range(1, 358):
+            if str(episode) not in self.episode_urls:
+                self.episode_urls[str(episode)] = (
+                    f"{self.base_url}/mantisradio{episode}/"
+                )
+        self.save_episode_urls()
 
     def load_episode_urls(self):
         """Load known episode URLs from url.json if it exists"""
@@ -36,6 +45,7 @@ class MantisDownloader:
                 logging.info(
                     f"Loaded {len(self.episode_urls)} episode URLs from url.json"
                 )
+        self.generate_episode_urls()
 
     def save_episode_urls(self):
         """Save discovered episode URLs to url.json"""
@@ -124,29 +134,79 @@ class MantisDownloader:
         return False
 
     def find_audio_links(self, soup, episode_number):
-        """Find all audio links in page"""
-        audio_links = []
+        """Find all audio links in page using multiple detection methods"""
+        audio_links = set()
 
-        # Check multiple potential sources for audio links
-        patterns = [
-            (r'https?://[^\s<>"]+?/mantisradio%s\.mp3' % episode_number),
-            (r'https?://[^\s<>"]+?/MANTISRADIO%s\.mp3' % episode_number),
-            (r'https?://[^\s<>"]+?/mantis_radio_%s[^"\']*\.mp3' % episode_number),
+        # Pattern variations for episode numbers
+        ep_patterns = [
+            str(episode_number).zfill(3),  # 001, 002, etc
+            str(episode_number),  # 1, 2, etc
         ]
 
-        # Search in all elements that might contain links
-        for pattern in patterns:
-            # Search in href attributes
-            links = soup.find_all("a", href=re.compile(pattern, re.I))
-            audio_links.extend(link["href"] for link in links)
+        # Common filename patterns
+        name_patterns = [
+            r"mantisradio{ep}\.mp3",
+            r"MANTISRADIO{ep}\.mp3",
+            r'mantis_radio_{ep}[^"\']*\.mp3',
+            r'MANTIS{ep}[^"\']*\.mp3',
+            r'MANTIS0*{ep}_[^"\']*\.mp3',  # Matches MANTIS001_12MAY07_STORMFIELD.mp3
+        ]
 
-            # Search in text content
-            text_content = soup.get_text()
-            audio_links.extend(re.findall(pattern, text_content, re.I))
+        # Find download links
+        download_links = soup.find_all(
+            "a", class_=re.compile(r"download|Download", re.I)
+        )
+        for link in download_links:
+            if "href" in link.attrs and link["href"].lower().endswith(".mp3"):
+                audio_links.add(urljoin(self.base_url, link["href"]))
+
+        # Search using all pattern combinations
+        for ep in ep_patterns:
+            for pattern in name_patterns:
+                full_pattern = pattern.format(ep=ep)
+
+                # Search in href attributes
+                links = soup.find_all("a", href=re.compile(full_pattern, re.I))
+                audio_links.update(link["href"] for link in links)
+
+                # Search in text content
+                text_content = soup.get_text()
+                # Use raw string for the regex pattern
+                found_links = re.findall(
+                    rf'https?://[^\s<>"]+?/{full_pattern}', text_content, re.I
+                )
+                audio_links.update(found_links)
+
+        # Also check for SoundCloud links
+        soundcloud_links = soup.find_all(
+            "a", href=re.compile(r"soundcloud\.com/.*mantisradio", re.I)
+        )
+        if soundcloud_links:
+            logging.info(
+                f"Found SoundCloud link for episode {episode_number} - could implement SoundCloud downloading if needed"
+            )
 
         # Clean and validate URLs
-        audio_links = [urljoin(self.base_url, url) for url in set(audio_links)]
-        return [url for url in audio_links if self.is_valid_audio_url(url)]
+        valid_links = []
+        for url in audio_links:
+            clean_url = urljoin(self.base_url, url)
+            if self.is_valid_audio_url(clean_url):
+                valid_links.append(clean_url)
+
+        if not valid_links:
+            # Try harder to find any MP3 links on the page
+            all_links = soup.find_all("a", href=re.compile(r"\.mp3$", re.I))
+            for link in all_links:
+                url = urljoin(self.base_url, link["href"])
+                if self.is_valid_audio_url(url):
+                    valid_links.append(url)
+
+        if valid_links:
+            logging.info(
+                f"Found {len(valid_links)} audio links for episode {episode_number}"
+            )
+
+        return valid_links
 
     def process_episode(self, url):
         """Process a single episode page"""
@@ -187,23 +247,24 @@ class MantisDownloader:
             logging.error(f"Error processing episode {episode_number}: {e}")
             return None
 
-    def run(self, start_url=None):
+    def run(self):
         """Main execution method"""
         if not os.path.exists(self.download_dir):
             os.makedirs(self.download_dir)
             logging.info(f"Created download directory: {self.download_dir}")
 
-        current_url = start_url or "https://darkfloor.co.uk/mantisradio357/"
+        # Process episodes in reverse order (newest to oldest)
+        for episode in range(357, 0, -1):
+            current_url = self.episode_urls.get(str(episode))
+            if not current_url:
+                continue
 
-        while current_url:
             logging.info(f"Processing: {current_url}")
             try:
-                current_url = self.process_episode(current_url)
-                if current_url:
-                    time.sleep(2)  # Be nice to the server
+                self.process_episode(current_url)
+                time.sleep(2)  # Be nice to the server
             except Exception as e:
-                logging.error(f"Error in main loop: {e}")
-                break
+                logging.error(f"Error processing episode {episode}: {e}")
 
 
 def main():
