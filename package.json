@@ -1,0 +1,21 @@
+{
+  "name": "mantis-music-dl",
+  "version": "0.2.1",
+  "description": "This is a simple script that downloads all the songs from a Mantis Music playlist. It uses the Mantis Music API to get the song URLs and then downloads them using yt-dlp.",
+  "main": "www/index.html",
+  "scripts": {
+    "serve": "npx serve -s -l 3051 www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soulwax/mantis-music-dl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "homepage": "https://github.com/soulwax/mantis-music-dl#readme",
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
