@@ -7,13 +7,17 @@ This is a simple script that downloads all the songs from a Mantis Music playlis
 - Python 3
 - yt-dlp
 
+You can use the `install.ps1` script to install python (as miniconda3) and yt-dlp on Windows.
+For Linux/macOS, you can use the `install.sh` script to install yt-dlp.
+
 ## Workflow
 
 1. Isolate your work environment:
 
     ```bash
     python3 -m venv venv
-    source venv/bin/activate
+    source venv/bin/activate # Linux/macOS 
+    venv\Scripts\activate # Windows
     ```
 
 2. Install the required packages:
