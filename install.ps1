@@ -1,3 +1,5 @@
+# File: install.ps1
+
 # install scoop
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod get.scoop.sh | Invoke-Expression

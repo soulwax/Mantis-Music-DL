@@ -1,3 +1,5 @@
+# File: install.sh
+
 # Update Homebrew
 brew update
 

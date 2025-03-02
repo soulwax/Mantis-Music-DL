@@ -1,4 +1,5 @@
 #!/bin/bash
+# File: install_linux.sh
 
 # Install packages
 sudo apt update
