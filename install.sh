@@ -31,6 +31,9 @@ nvm install --lts
 nvm use --lts
 npm install -g npm@latest
 
+python3 -m venv venv
+source venv/bin/activate
+#
 # Upgrade pip and install requirements
 python3 -m pip install --upgrade pip
 pip install -r requirements.txt
