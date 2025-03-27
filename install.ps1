@@ -26,6 +26,10 @@ nvm install latest
 nvm use latest
 npm install -g npm@latest
 
+python -m venv venv
+.\venv\Scripts\activate
+
+
 python -m pip install --upgrade pip
 pip install -r .\requirements.txt
 

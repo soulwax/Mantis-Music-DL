@@ -20,3 +20,10 @@ npm install -g npm@latest
 sudo apt install -y miniconda
 conda init bash
 conda install -y python=3.13
+python3 -m venv venv
+source venv/bin/activate
+# Upgrade pip and install requirements
+python3 -m pip install --upgrade pip
+pip install -r requirements.txt
+# Install yt-dlp and ffmpeg
+sudo apt install -y yt-dlp ffmpeg
